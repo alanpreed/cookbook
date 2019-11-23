@@ -2,7 +2,7 @@ import React from 'react';
 
 import firebase from "./firestore";
 
-class User extends React.Component {
+class Login extends React.Component {
 constructor() {
   super();
     this.state = {
@@ -56,4 +56,4 @@ constructor() {
       }
    }
    
-export default User;
+export default Login;
