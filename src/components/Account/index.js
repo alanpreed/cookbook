@@ -3,7 +3,7 @@ import React from 'react'
 import { PasswordForgetForm } from '../PasswordForget';
 import PasswordChangeForm from '../PasswordChange';
 import { AuthUserContext, withAuthorisation } from '../Session';
-import { auth } from 'firebase';
+import { AddRecipeLink } from '../AddRecipe';
 
 const AccountPage = () => (
   <AuthUserContext.Consumer>
@@ -13,6 +13,7 @@ const AccountPage = () => (
         <h2>UID: {authUser.uid}</h2>
         <PasswordForgetForm />
         <PasswordChangeForm />
+        <AddRecipeLink />
       </div>
     )}
   </AuthUserContext.Consumer>
