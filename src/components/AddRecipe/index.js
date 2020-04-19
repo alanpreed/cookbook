@@ -20,7 +20,11 @@ class AddRecipeForm extends React.Component {
     const { recipeTitle } = this.state;
     console.log(this.props.firebase.auth.currentUser.uid)
     this.props.firebase.recipes(this.props.firebase.auth.currentUser.uid)
-                        .doc(recipeTitle).set({recipeTitle,},{merge: true,},)
+                        .doc(recipeTitle)
+                        .set({recipeTitle,},{merge: true,},)
+                        .then(() => {
+                          this.setState({ ...INITIAL_STATE });
+                        })
                         .catch(error => {this.setState({ error });
                         });
 
