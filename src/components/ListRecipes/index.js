@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { withAuthorisation } from '../Session';
 import * as ROUTES from '../../constants/routes';
+import { ViewRecipeLink } from '../ViewRecipe';
 
 const INITIAL_STATE = {
   recipes: [],
@@ -27,7 +28,7 @@ class ListRecipesPage extends React.Component {
         <h2>list of recipes</h2>
         {this.state.recipes && this.state.recipes.map(recipe => (
           <li key={recipe.id}>
-            {recipe.recipeTitle}
+            <ViewRecipeLink id={recipe.id} text={recipe.recipeTitle}/>
           </li>
         ))}
       </div>

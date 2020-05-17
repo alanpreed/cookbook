@@ -6,3 +6,4 @@ export const ACCOUNT = '/account';
 export const PASSWORD_FORGET = '/pw-forget';
 export const ADD_RECIPE = '/new-recipe';
 export const LIST_RECIPES = '/recipes';
+export const VIEW_RECIPE = `${LIST_RECIPES}/:id`;
