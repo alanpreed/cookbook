@@ -10,6 +10,7 @@ import AccountPage from '../Account';
 import AddRecipePage from '../AddRecipe';
 import * as ROUTES from '../../constants/routes';
 import { withAuthentication } from '../Session';
+import ListRecipesPage from '../ListRecipes';
 
 const App = () => (
   <Router>
@@ -23,6 +24,7 @@ const App = () => (
       <Route path={ROUTES.HOME} component={HomePage} />
       <Route path={ROUTES.ACCOUNT} component={AccountPage} />
       <Route path={ROUTES.ADD_RECIPE} component={AddRecipePage} />
+      <Route path={ROUTES.LIST_RECIPES} component={ListRecipesPage} />
     </div>
   </Router>
 )

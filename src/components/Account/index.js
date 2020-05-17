@@ -4,6 +4,7 @@ import { PasswordForgetForm } from '../PasswordForget';
 import PasswordChangeForm from '../PasswordChange';
 import { AuthUserContext, withAuthorisation } from '../Session';
 import { AddRecipeLink } from '../AddRecipe';
+import { ListRecipesLink } from '../ListRecipes';
 
 const AccountPage = () => (
   <AuthUserContext.Consumer>
@@ -14,6 +15,7 @@ const AccountPage = () => (
         <PasswordForgetForm />
         <PasswordChangeForm />
         <AddRecipeLink />
+        <ListRecipesLink />
       </div>
     )}
   </AuthUserContext.Consumer>
